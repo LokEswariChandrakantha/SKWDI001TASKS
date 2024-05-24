@@ -1,0 +1,118 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Table</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e7f4d9;
+    }
+    
+    .pricing-table {
+      margin-top: 50px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .pricing-table th, .pricing-table td {
+      text-align: center;
+      vertical-align: middle !important;
+    }
+    
+    .pricing-table th {
+      background-color: #63c3f0;
+      color: #f11b98;
+      font-weight: bold;
+    }
+    
+    .pricing-table td {
+      background-color: #fff;
+    }
+    
+    .pricing-table .plan-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    
+    .pricing-table .plan-price {
+      font-size: 36px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    
+    .pricing-table .plan-features {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .pricing-table .plan-features li {
+      padding: 10px 0;
+      border-top: 1px solid #dee2e6;
+    }
+    
+    .pricing-table .plan-cta {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="table-responsive">
+          <table class="table table-bordered pricing-table">
+            <thead>
+              <tr>
+                <th>Plan</th>
+                <th>Price</th>
+                <th>Features</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Basic</td>
+                <td class="plan-price">$9.99/month</td>
+                <td class="plan-features">
+                  <li>Feature 1</li>
+                  <li>Feature 2</li>
+                  <li>Feature 3</li>
+                </td>
+                <td class="plan-cta"><a href="#" class="btn btn-primary">Sign Up</a></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro</td>
+                <td class="plan-price">$19.99/month</td>
+                <td class="plan-features">
+                  <li>Feature 1</li>
+                  <li>Feature 2</li>
+                  <li>Feature 3</li>
+                  <li>Feature 4</li>
+                </td>
+                <td class="plan-cta"><a href="#" class="btn btn-primary">Sign Up</a></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Premium</td>
+                <td class="plan-price">$29.99/month</td>
+                <td class="plan-features">
+                  <li>Feature 1</li>
+                  <li>Feature 2</li>
+                  <li>Feature 3</li>
+                  <li>Feature 4</li>
+                  <li>Feature 5</li>
+                </td>
+                <td class="plan-cta"><a href="#" class="btn btn-primary">Sign Up</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
