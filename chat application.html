@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Website</title>
+<style>
+    .chatbox {
+        display: flex;
+        flex-direction: column;
+    }
+    .message {
+        padding: 8px;
+        margin: 8px;
+        border-radius: 5px;
+        max-width: 70%;
+    }
+    .sender {
+        background-color: #DCF8C6;
+        align-self: flex-end;
+    }
+    .receiver {
+        background-color: #ECE5DD;
+        align-self: flex-start;
+    }
+     .user-message{
+Background-color:#DCF8C6;
+align-self:flex-end;
+}
+.other-message{
+background-color:#ECE5DD;
+align-self:flex-start;
+}
+body{
+background-color:#FFD1DC;
+}
+      </style>
+</head>
+<body>
+<h1>Start chatting by writting message in message box</h1>
+<div class="chatbox" id="chatbox">
+</div>
+
+<input type="text" id="message" placeholder="Type a message">
+<button onclick="sendMessage()">Send</button>
+
+<script>
+var responses = ["Friend:Hlo.how are u?",
+                 "Friend:fine.",
+                 "Friend:what are you planning in holidays",
+                 "Friend:ohh!it's great idea",
+                 "Friend:i am also do that",
+                  "Friend:thanks for sharing your thought",
+"ok bye"];
+
+var responseIndex = 0;
+
+function sendMessage() {
+    var message = document.getElementById("message").value;
+    if (message.trim() !== "") {
+        var chatbox = document.getElementById("chatbox");
+
+        // Create a new message element for the user's message
+        var userMessage = document.createElement("div");
+        userMessage.textContent = message;
+        userMessage.classList.add("message", "user-message");
+
+        // Append the user's message to the chatbox
+        chatbox.appendChild(userMessage);
+
+        // Get the next response from the array
+        var reply = responses[responseIndex];
+
+        // Create a new message element for the reply
+        var otherMessage = document.createElement("div");
+        otherMessage.textContent = reply;
+        otherMessage.classList.add("message", "other-message");
+        chatbox.appendChild(otherMessage);
+
+        // Scroll to the bottom of the chatbox
+        chatbox.scrollTop = chatbox.scrollHeight;
+
+        // Update the response index for the next message
+        responseIndex = (responseIndex + 1) % responses.length;
+
+        // Clear the input field after sending
+        document.getElementById("message").value = "";
+    }
+}
+
+</script>
+</body>
+</html>
